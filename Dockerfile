@@ -9,6 +9,6 @@ COPY flowerconfig.py .
 
 EXPOSE 5555
 
-CMD ["celery", "flower", "--port=5555", "--conf=flowerconfig.py", "-l", "debug"]
+CMD ["celery", "flower", "--port=5555", "--conf=flowerconfig.py"]
 
 
