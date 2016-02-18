@@ -6,9 +6,9 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY flowerconfig.py .
+COPY entrypoint.sh .
 
 EXPOSE 5555
 
-CMD ["celery", "flower", "--port=5555", "--conf=flowerconfig.py"]
-
+ENTRYPOINT ["entrypoint.sh"]
 
