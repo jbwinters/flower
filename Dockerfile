@@ -6,9 +6,9 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY flowerconfig.py .
-COPY entrypoint.sh .
+COPY entrypoint.sh /usr/bin/entrypoint.sh
 
 EXPOSE 5555
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/usr/bin/entrypoint.sh"]
 
