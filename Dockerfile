@@ -11,4 +11,5 @@ COPY entrypoint.sh .
 EXPOSE 5555
 
 ENTRYPOINT ["./entrypoint.sh"]
+CMD ["--port=5555", "--conf=flowerconfig.py"]
 
